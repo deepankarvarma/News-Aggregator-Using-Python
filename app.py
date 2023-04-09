@@ -7,7 +7,7 @@ NEWS_API_ENDPOINT = 'https://newsapi.org/v2/top-headlines'
 def fetch_news(country, category=None):
     params = {
         'country': country,
-        'apiKey': NEWS_API_KEY
+        'apiKey': st.secrets["NEWS_API_KEY"]
     }
     if category:
         params['category'] = category
